@@ -1,10 +1,23 @@
 
-<section class='page-section'>
+<section class='page-section standard-diptych'>
 <div class='inner-column'>
 
-  <h1>{{section_title}}</h1>
-  
-  <p>{{section_description}}</p>
+  <main class='content'>
+    <aside class='visual'>
+      <figure class='image'>
+        <img src='https://placehold.it/1600' />
+      </figure>
+    </aside>
+    <aside class='story'>
+      <h2 class='heading'>{{section.settings.heading}}</h2>
+      
+      <h3 class='subheading'>{{section.settings.subheading}}</h3>
+
+      <div class='richtext'>
+        {{- section.settings.content -}}
+      </div>
+    </aside>
+  </main>
 
 </div>
 </section>
@@ -17,20 +30,29 @@
     "settings": [
       {
         "type": "text",
+        "id": "headingxxx",
+        "label": "Heading",
+        "default": "Standard Diptych Heading xxxxx"
+      },
+      {
+        "type": "text",
         "id": "heading",
-        "label": "Heading"
+        "label": "Heading",
+        "default": "Standard Diptych Heading"
       },
       {
         "type": "text",
         "id": "subheading",
-        "label": "Subheading"
+        "label": "Subheading",
+        "default": "Standard Diptych Subheading"
       },
       {
         "type": "textarea",
         "id": "content",
-        "label": "Rich text"
-      }
-	]
+        "label": "Rich text",
+        "default": "Standard Diptych Rich text content. Standard Diptych Rich text content. Standard Diptych Rich text content."
+      },
+    ]
   }
 {% endschema %}
 
@@ -38,6 +60,8 @@
 
 {% stylesheet %}
 {% endstylesheet %}
+
+
 
 {% javascript %}
 {% endjavascript %}

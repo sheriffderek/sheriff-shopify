@@ -330,6 +330,33 @@ button.button, a.button {
   }
 }
 
+
+.standard-diptych {
+  //
+  .inner-column {
+    //
+  }
+  .heading {
+    @include loud-voice();
+  }
+  .subheading {
+    @include attention-voice();
+    margin-top: $pad;
+  }
+  .richtext {
+    @include article-styles();
+    margin-top: $pad;
+  }
+  @include bp(1) {
+    .inner-column {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+
+
 // $pages
 .page-title {
   @include loud-voice();  
