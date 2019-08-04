@@ -218,8 +218,7 @@ p, li {
   }
 }
 
-// $type
-article {
+@mixin article-styles() {
   p, h1, h2, h3, li {
     max-width: 740px; 
   }
@@ -264,6 +263,11 @@ article {
       margin-top: $pad*.5;
     }
   }
+}
+
+// $type
+article {
+  @include article-styles();
 }
 
 
