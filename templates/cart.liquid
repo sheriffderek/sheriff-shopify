@@ -1,5 +1,9 @@
+
+<section class='page-section cart'>
+<div class='inner-column'>
+
 {% if cart.item_count > 0 %}
-  <h1>cart</h1>
+  <h1 class='page-title'>cart</h1>
   <form action="/cart" method="post" novalidate>
     <table>
       <thead>
@@ -44,3 +48,6 @@
   <h2>cart</h2>
   Cart is empty
 {% endif %}
+  
+</div>
+</section>

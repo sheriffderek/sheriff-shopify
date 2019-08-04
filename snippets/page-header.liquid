@@ -1,0 +1,19 @@
+
+{% if page.title %}
+  {% assign page_title = page.title %}
+{% else %}
+  {% assign page_title = "404" %}
+{% endif %}
+
+<header class='page-section page-header'>
+<div class='inner-column'>
+
+  <h1 class='page-title'>{{page_title}}</h1>
+
+</div>
+</header>
+
+{% comment %}
+  <h1 class='visually-hidden'>{{ 'general.404.title' | t }}</h1>
+  <p class='visually-hidden'>{{ 'general.404.subtext_html' | t }}</p>
+{% endcomment %}

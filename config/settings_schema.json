@@ -4,7 +4,102 @@
     "theme_name": "Themekit template theme",
     "theme_version": "1.0.0",
     "theme_author": "Shopify",
-    "theme_documentation_url": "https://github.com/Shopify/themekit",
-    "theme_support_url": "https://github.com/Shopify/themekit/issues"
+    "theme_documentation_url": "https:\/\/github.com\/Shopify\/themekit",
+    "theme_support_url": "https:\/\/github.com\/Shopify\/themekit\/issues"
+  },
+  {
+    "name": "Text Options",
+    "settings": [
+      {
+        "type": "text",
+        "id": "shop_name",
+        "label": "Shop Name"
+      },
+      {
+        "type": "textarea",
+        "id": "shop_description",
+        "label": "Shop Description"
+      }
+    ]
+  },
+  {
+    "name": "Theme colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "black",
+        "label": "$black"
+      },
+      {
+        "type": "color",
+        "id": "white",
+        "label": "$white"
+      },
+      {
+        "type": "color",
+        "id": "gray",
+        "label": "$gray"
+      },
+      {
+        "type": "color",
+        "id": "gray_light",
+        "label": "$gray-light"
+      },
+      {
+        "type": "color",
+        "id": "gray_dark",
+        "label": "$gray-dark"
+      },
+      {
+        "type": "color",
+        "id": "gray_lighter",
+        "label": "$gray-lighter"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "$color"
+      },
+      {
+        "type": "color",
+        "id": "color_light",
+        "label": "$color-light"
+      },
+      {
+        "type": "color",
+        "id": "color_dark",
+        "label": "$color-dark"
+      },
+      {
+        "type": "color",
+        "id": "highlight",
+        "label": "$highlight"
+      },
+      {
+        "type": "color",
+        "id": "highlight_light",
+        "label": "$highlight-light"
+      },
+      {
+        "type": "color",
+        "id": "highlight_dark",
+        "label": "$highlight-dark"
+      },
+      {
+        "type": "color",
+        "id": "alternate",
+        "label": "$alternate"
+      },
+      {
+        "type": "color",
+        "id": "alternate_light",
+        "label": "$alternate-light"
+      },
+      {
+        "type": "color",
+        "id": "alternate_dark",
+        "label": "$alternate-dark"
+      }
+    ]
   }
 ]

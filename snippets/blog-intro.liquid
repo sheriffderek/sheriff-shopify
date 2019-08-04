@@ -1,0 +1,42 @@
+
+{% assign blog = blogs['news'] %}
+{% assign featured_articles = blog.articles %}
+
+
+<script>
+  console.log('{{blog['news'] | json}}');
+  console.log('{{blog.articles | json}}');
+</script>
+
+
+<section class="page-section blog-intro">
+<div class="inner-column">
+
+  <header class="section-header">
+    <h2 class="heading">Blog intro</h2>
+  </header>
+
+  <nav class="featured-articles">
+    <ol class="item-list">before article loop... not sure why this isn't working yet
+      {% for article in featured_articles %}
+        {% if forloop.index < 4 %}
+          <li class="item">
+            <a class="link" href="">
+              {% include "article-card" %} 
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  </nav>
+
+  {% if blog.articles_count > 3 %}
+    <footer class="actions">
+      <a class="button" href="/blog-etc">
+        <span>Show more</span>
+      </a>
+    </footer>
+  {% endif %}
+
+</div>
+</section>

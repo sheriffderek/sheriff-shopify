@@ -1,0 +1,9 @@
+
+<aside class='product-overview'>
+  <a href="{{ product.url | within: collection }}" class='image'>
+    <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+  </a>
+  <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+  {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
+  {{ product.price | money }}
+</aside>
