@@ -1,5 +1,6 @@
 
 {% assign this = section.settings %}
+{% assign imageSrc = this.image | img_url: "medium" %}
 
 
 <section class='page-section standard-diptych'>
@@ -8,12 +9,13 @@
   <main class='content'>
     <aside class='visual'>
       <figure class='image'>
-        <img src='{{this.image}}' />
+        <img src='{{imageSrc}}' />
       </figure>
     </aside>
+
     <aside class='story'>
       <h2 class='heading'>
-        <span>{{this.heading}} hello</span>
+        <span>{{this.heading}}</span>
       </h2>
 
       <h3 class='subheading'>
@@ -57,13 +59,25 @@
         "type": "richtext",
         "id": "content",
         "label": "Rich text",
-        "default": "Standard Diptych Rich text content. Standard Diptych Rich text content. Standard Diptych Rich text content."
+        "default": "<p>Standard Diptych Rich text content. Standard Diptych Rich text content. Standard Diptych Rich text content.</p>"
       },
       {
         "type": "image_picker",
         "id": "image",
-        "label": "Image",
-        "default": "https://placehold.it/1600"
+        "label": "Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "select",
+        "name": "example text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text1",
+            "label": "example block thing"
+          }
+        ]
       }
     ]
   }
