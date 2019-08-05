@@ -1,6 +1,6 @@
 
 {% assign this = section.settings %}
-{% assign imageSrc = this.image | img_url: "medium" %}
+{% assign this.imageSrc = this.image | img_url: "medium" %}
 
 
 <section class='page-section standard-diptych'>
@@ -9,7 +9,7 @@
   <main class='content'>
     <aside class='visual'>
       <figure class='image'>
-        <img src='{{imageSrc}}' />
+        <img src='{{this.imageSrc}}' />
       </figure>
     </aside>
 
@@ -23,7 +23,7 @@
       </h3>
 
       <div class='richtext'>
-        {{- this.content -}}
+        {{this.content}}
       </div>
     </aside>
   </main>
@@ -35,10 +35,10 @@
 
 {% schema %}
   {
-    "name": "Standard diptych",
+    "name": "Frequent questions",
     "presets": [
       {
-        "name": "Standard diptych",
+        "name": "Frequent questions",
         "category": "Modules"
       }
     ],
