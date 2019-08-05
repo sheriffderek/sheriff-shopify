@@ -271,8 +271,11 @@ article {
 }
 
 
+////////////////////
+// $COMPONENTS
+////////////////////
 
-// $components
+// $button
 button.button, a.button {
   // needs attention for various uses
   display: inline-block;
@@ -312,7 +315,7 @@ button.button, a.button {
 
 
 
-// $header
+// $site-header
 .site-header {
   background: $color;
   color: $white;
@@ -330,7 +333,11 @@ button.button, a.button {
   }
 }
 
+////////////////////
+// $SECTIONS
+////////////////////
 
+// $standard-diptych
 .standard-diptych {
   //
   .inner-column {
@@ -347,27 +354,45 @@ button.button, a.button {
     @include article-styles();
     margin-top: $pad;
   }
+  @include bp('0-1') {
+    .story {
+      width: 50%;
+      margin-top: $pad*2;
+    }
+  }
   @include bp(1) {
-    .inner-column {
+    .content {
       display: flex;
       flex-direction: row;
+      align-items: center;
+    }
+    .visual, .story {
+      width: 50%;
+    }
+    .story {
+      padding-left: $pad*2;
     }
   }
 }
 
+// $site-footer
+.site-footer {
+  background: $black;
+  color: $white;
+  padding-bottom: $pad*12;
+}
 
+
+////////////////////
+// $PAGES
+////////////////////
 
 // $pages
 .page-title {
   @include loud-voice();  
 }
 
-// $footer
-.site-footer {
-  background: $black;
-  color: $white;
-  padding-bottom: $pad*12;
-}
+
 
 
 

@@ -1,20 +1,27 @@
 
+{% assign this = section.settings %}
+
+
 <section class='page-section standard-diptych'>
 <div class='inner-column'>
 
   <main class='content'>
     <aside class='visual'>
       <figure class='image'>
-        <img src='https://placehold.it/1600' />
+        <img src='{{this.image}}' />
       </figure>
     </aside>
     <aside class='story'>
-      <h2 class='heading'>{{section.settings.heading}}</h2>
-      
-      <h3 class='subheading'>{{section.settings.subheading}}</h3>
+      <h2 class='heading'>
+        <span>{{this.heading}} hello</span>
+      </h2>
+
+      <h3 class='subheading'>
+        <span>{{this.subheading}}</span>
+      </h3>
 
       <div class='richtext'>
-        {{- section.settings.content -}}
+        {{- this.content -}}
       </div>
     </aside>
   </main>
@@ -30,9 +37,9 @@
     "settings": [
       {
         "type": "text",
-        "id": "headingxxx",
-        "label": "Heading",
-        "default": "Standard Diptych Heading xxxxx"
+        "id": "section-heading",
+        "label": "Section heading",
+        "default": "Section heading....."
       },
       {
         "type": "text",
@@ -52,6 +59,12 @@
         "label": "Rich text",
         "default": "Standard Diptych Rich text content. Standard Diptych Rich text content. Standard Diptych Rich text content."
       },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "default": "https://placehold.it/1600"
+      }
     ]
   }
 {% endschema %}
